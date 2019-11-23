@@ -1,4 +1,1 @@
-By
-Phat Manewattana
-Miguel Dong
-Aleksander Suchocki
+By Phat Manewattana, Miguel Dong, and Aleksander Suchocki.
