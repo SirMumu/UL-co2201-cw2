@@ -162,7 +162,10 @@ def confirmation(msg):
     return decision
 
 def rules():
-    print("Rules goes here.")
+    print("At the start of each session you get 6 chances with your character")
+    print("Each bad choice of a letter looses you a limb")
+    print("If you get all the letters right, you get a chance to re-grow one limb, if you select correct definition from available choices")
+    print("More to come")
     
 def start_round(chosen,ans,choices,life,highest):
     word = chosen.lower()
