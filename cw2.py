@@ -135,7 +135,7 @@ def hint(life,scrambled_word,full_word):
 def show_progress(life,current_guess,not_guessed):
     player_char(life)
     print("What you have now is: "," ".join(current_guess))
-    print("What you have not guessed: "," ".join(not_guessed),"\n")
+    print("Letters you have not yet tried: "," ".join(not_guessed),"\n")
     
 def check_highest(life,highest):
     if life > highest:
@@ -182,12 +182,12 @@ def start_round(i,chosen,ans,choices,life,highest):
             current_guess.append(" ")
         else:
             current_guess.append("_")
-    print("Word randomed. You are on try number",i+1,"out of 10")
+    print("Word randomed. You are on word number",i+1,"out of 10")
     print("The word has",length,"characters.")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
         try:
-            usrinput = input("Guess or type 'hint' for help: ")
+            usrinput = input("Guess a letter or type 'hint' for help: ")
             usrinput = usrinput.lower()
             if usrinput == "hint":
                 life,current_guess = hint(life,current_guess,word)
