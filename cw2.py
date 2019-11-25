@@ -274,7 +274,7 @@ def start_game():
             wins += 1
         else:
             loses += 1
-        decision = confirmation("Another? yes, no, or rules: ")
+        decision = confirmation("Would you like another game? yes, no, or rules: ")
     print("You have survived",wins,"times.")
     print("You have died",loses,"times.")
     print("The highest form you have achieved is: ")
