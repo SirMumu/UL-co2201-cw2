@@ -158,7 +158,7 @@ def confirmation(msg):
             else:
                 raise ValueError
         except ValueError:
-            print("Only yes, no, or rules.\n")
+            print("Only type yes, no, or rules.\n")
     return decision
 
 def rules():
@@ -167,7 +167,7 @@ def rules():
     print("If you get all the letters right, you get a chance to re-grow one limb, if you select correct definition from available choices")
     print("More to come")
     
-def start_round(chosen,ans,choices,life,highest):
+def start_round(i,chosen,ans,choices,life,highest):
     word = chosen.lower()
     current_guess = []
     word_list = []
@@ -181,7 +181,7 @@ def start_round(chosen,ans,choices,life,highest):
             current_guess.append(" ")
         else:
             current_guess.append("_")
-    print("Word randomed.")
+    print("Word randomed. You are on try number",i+1,"out of 10")
     print("The word has",length,"characters.")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
@@ -258,7 +258,7 @@ def start_session():
     result = "won"
     for i in range(10):
         word,ans,choices = random_word()
-        life,highest = start_round(word,ans,choices,life,highest)
+        life,highest = start_round(i,word,ans,choices,life,highest)
         if life == 0:
             result = "lost"
             break
