@@ -271,14 +271,14 @@ def start_game():
     highest = 6
     print("Welcome to Hangman.")
     rules()
-    decision = confirmation("Shall we start? yes, no, or rules: ")
+    decision = confirmation("Shall we start? Type 'yes', 'no', or 'rules' for showing rules: ")
     while decision == "yes":
         result,life,highest = start_session()
         if result == "won":
             wins += 1
         else:
             loses += 1
-        decision = confirmation("Would you like another game? yes, no, or rules: ")
+        decision = confirmation("Would you like another game? Type 'yes', 'no', or 'rules': ")
     print("You have survived",wins,"times.")
     print("You have died",loses,"times.")
     print("The highest form you have achieved is: ")
