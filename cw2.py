@@ -158,7 +158,7 @@ def confirmation(msg):
             else:
                 raise ValueError
         except ValueError:
-            print("Only type yes, no, or rules.\n")
+            print("Only type 'yes', 'no', or 'rules'.\n")
     return decision
 
 def rules():
@@ -182,7 +182,7 @@ def start_round(i,chosen,ans,choices,life,highest):
             current_guess.append(" ")
         else:
             current_guess.append("_")
-    print("Word randomed. You are on word number",i+1,"out of 10")
+    print("Word randomed. You are on word number",i+1,"out of 10.")
     print("The word has",length,"characters.")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
@@ -246,7 +246,7 @@ def start_round(i,chosen,ans,choices,life,highest):
                     print("The word is",chosen+".\n")
                     break
         except ValueError:
-            print("One char only.")
+            print("One character only.")
             continue
         except TypeError:
             print("Needs to be from a-z.")
