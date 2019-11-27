@@ -151,7 +151,7 @@ def confirmation(msg):
             if decision == "yes":
                 break
             elif decision == "no":
-                print("Shame.\n")
+                print("Shame. See you next time and thanks for playing!\n")
                 break
             elif decision == "rules":
                 rules()
@@ -192,7 +192,7 @@ def start_round(i,chosen,ans,choices,life,highest):
             if usrinput == "hint":
                 life,current_guess = hint(life,current_guess,word)
                 if life == 0:
-                    print("Weak.\n")
+                    print("You lost. Better luck next time!\n")
                     break
                 else:
                     show_progress(life,current_guess,not_guessed)
@@ -203,7 +203,7 @@ def start_round(i,chosen,ans,choices,life,highest):
                 raise TypeError
             else:
                 if usrinput in guessed:
-                    print("Already guessed.\n")
+                    print("The letter was already guessed. Try another.\n")
                     continue
                 else:
                     guessed.append(usrinput)
@@ -242,7 +242,7 @@ def start_round(i,chosen,ans,choices,life,highest):
                             continue
                     break
                 elif life == 0:
-                    print("Weak.")
+                    print("You lost. Better luck next time!\n")
                     print("The word is",chosen+".\n")
                     break
         except ValueError:
