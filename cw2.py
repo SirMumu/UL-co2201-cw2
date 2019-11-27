@@ -60,7 +60,7 @@ def random_word():
                "Program, with its data, in the process of being executed.",
                "An action of storing state of current process and (re)starting another.",
                "A process can be stopped at any point by timer interrupt.",
-               "A process can’t be stopped during regular operations.",
+               "A process can't be stopped during regular operations.",
                "A system designed to run a series of programs without human interaction.",
                "A system designed to communicate with users."]
     
@@ -167,10 +167,10 @@ def rules():
     print("2. Each time you can only guess one letter at a time. Use lower case. ")
     print("3. With each wrong letter you lose a limb.")
     print("4. If you guess the whole word, you get a chance to regrow one limb, you regrow it by selecting the correct definition from available choices.")
-    print("5. You can use hints, but this will cost you one of the limbs. Hint discovers 10% of the word. BEWARE if letter was discovered by a hint it doesn’t mean that the same letter may not occur at a different location.")
+    print("5. You can use hints, but this will cost you one of the limbs. Hint discovers 10% of the word. BEWARE if letter was discovered by a hint it doesn't mean that the same letter may not occur at a different location.")
     print("6. There are ten rounds in each session.")
     print("7. Once the session is over, you can choose to start another session or exit the game.")
-    print("8. After you choose you’ve had enough sessions and you want to end the game, your highest form will be printed./n")
+    print("8. After you choose you've had enough sessions and you want to end the game, your highest form will be printed./n")
 def start_round(i,chosen,ans,choices,life,highest):
     word = chosen.lower()
     current_guess = []
