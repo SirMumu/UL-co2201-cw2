@@ -59,8 +59,8 @@ def random_word():
                "Code ready to execute.",
                "Program, with its data, in the process of being executed.",
                "An action of storing state of current process and (re)starting another.",
-               "A process that can be stopped at any point by timer interrupt.",
-               "A process that can’t be stopped during regular operations.",
+               "A process can be stopped at any point by timer interrupt.",
+               "A process can’t be stopped during regular operations.",
                "A system designed to run a series of programs without human interaction.",
                "A system designed to communicate with users."]
     
@@ -184,6 +184,7 @@ def start_round(i,chosen,ans,choices,life,highest):
             current_guess.append("_")
     print("Word randomed. You are on word number",i+1,"out of 10.")
     print("The word has",length,"characters.")
+    print("You have ",life, "limbs")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
         try:
@@ -213,9 +214,9 @@ def start_round(i,chosen,ans,choices,life,highest):
                 current_guess = get_current_guess(usrinput,word_list,current_guess)
                 show_progress(life,current_guess,not_guessed)
                 if is_word_guessed(current_guess,word) == True:
-                    print("Nice.")
+                    print("Nice. You guessed the whole word!")
                     print("The word is",chosen+".\n")
-                    print("What is",chosen+"?")
+                    print("What is the definition of",chosen+"?")
                     ch = 1
                     for choice in choices:
                         print(str(ch)+".",choice)
