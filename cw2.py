@@ -187,7 +187,7 @@ def start_round(i,chosen,ans,choices,life,highest):
             current_guess.append("_")
     print("Word randomed. You are on word number",i+1,"out of 10.")
     print("The word has",length,"characters.")
-    print("You have ",life, "limbs")
+    print("You have",life, "limbs")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
         try:
