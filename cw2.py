@@ -163,14 +163,14 @@ def confirmation(msg):
 
 def rules():
     print("\nRules:")
-    print("1. At the start of each session you get 6 chances with your character")
-    print("2. Each time you can only guess one letter at a time. Use lower case. ")
-    print("3. With each wrong letter you lose a limb.")
-    print("4. If you guess the whole word, you get a chance to regrow one limb, you regrow it by selecting the correct definition from available choices.")
-    print("5. You can use hints, but this will cost you one of the limbs. Hint discovers 10% of the word. BEWARE if letter was discovered by a hint it doesn’t mean that the same letter may not occur at a different location.")
-    print("6. There are ten rounds in each session.")
-    print("7. Once the session is over, you can choose to start another session or exit the game.")
-    print("8. After you choose you’ve had enough sessions and you want to end the game, your highest form will be printed./n")
+    print("1. Each game you start with a new character.")
+    print("2. The objective is to guess the words while preserving your character.")
+    print("3. There are 10 words in each game.")
+    print("4. You can only guess one alphabetical letter at a time.")
+    print("5. You can use a hint, which will reveal letters(10%) in that word. BEWARE. If a letter was revealed by a hint, it doesn’t mean that the same letter may not occur at a different location.")
+    print("6. With each wrong letter, you lose a limb.")
+    print("7. After guessing the word, you get a chance to regrow one limb by selecting the correct definition from available choices.\n")
+    
 def start_round(i,chosen,ans,choices,life,highest):
     word = chosen.lower()
     current_guess = []
