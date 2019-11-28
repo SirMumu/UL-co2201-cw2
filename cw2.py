@@ -163,13 +163,14 @@ def confirmation(msg):
 
 def rules():
     print("\nRules:")
-    print("1. Each game you start with a new character.")
-    print("2. The objective is to guess the words while preserving your character.")
-    print("3. There are 10 words in each game.")
-    print("4. You can only guess one alphabetical letter at a time.")
-    print("5. You can use a hint, which will reveal letters(10%) in that word. BEWARE. If a letter was revealed by a hint, it doesn’t mean that the same letter may not occur at a different location.")
-    print("6. With each wrong letter, you lose a limb.")
-    print("7. After guessing the word, you get a chance to regrow one limb by selecting the correct definition from available choices.\n")
+    print("1. Each game you start with a new character............................................................................")
+    print("2. The objective is to guess the words while preserving your character.................................................")
+    print("3. There are 10 words in each game.....................................................................................")
+    print("4. You can only guess one alphabetical letter at a time................................................................")
+    print("5. You can use a hint, which will reveal letters(10%) in that word.....................................................")
+    print("BEWARE. If a letter was revealed by a hint, it doesn’t mean that the same letter may not occur at a different location.")
+    print("6. With each wrong letter, you lose a limb.............................................................................")
+    print("7. After guessing the word, you can regrow a limb by selecting the correct definition from available choices...........\n")
     
 def start_round(i,chosen,ans,choices,life,highest):
     word = chosen.lower()
@@ -187,7 +188,7 @@ def start_round(i,chosen,ans,choices,life,highest):
             current_guess.append("_")
     print("Word randomed. You are on word number",i+1,"out of 10.")
     print("The word has",length,"characters.")
-    print("You have",life, "limbs")
+    print("You have",life, "limbs.")
     show_progress(life,current_guess,not_guessed)
     while life > 0:
         try:
@@ -217,7 +218,7 @@ def start_round(i,chosen,ans,choices,life,highest):
                 current_guess = get_current_guess(usrinput,word_list,current_guess)
                 show_progress(life,current_guess,not_guessed)
                 if is_word_guessed(current_guess,word) == True:
-                    print("Nice. You guessed the whole word!")
+                    print("Nice. You guessed it!")
                     print("The word is",chosen+".\n")
                     print("What is the definition of",chosen+"?")
                     ch = 1
@@ -229,7 +230,7 @@ def start_round(i,chosen,ans,choices,life,highest):
                     print("")
                     while True:
                         try:
-                            usrinput = int(input("Select the correct answer (1, 2, or 3): "))
+                            usrinput = int(input("Select the correct answer; 1, 2, or 3: "))
                             if usrinput < 1 or usrinput > 3:
                                 raise ValueError
                             elif usrinput == correct:
@@ -279,7 +280,7 @@ def start_game():
     highest = 6
     print("Welcome to Hangman.")
     rules()
-    decision = confirmation("Shall we start? Type 'yes', 'no', or 'rules' for showing rules: ")
+    decision = confirmation("Shall we start? Type 'yes', 'no', or 'rules' to see the rules: ")
     while decision == "yes":
         result,life,highest = start_session(highest)
         if result == "won":
