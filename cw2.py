@@ -168,7 +168,7 @@ def rules():
     print("3. There are 10 words in each game.")
     print("4. You can only guess one alphabetical letter at a time.")
     print("5. You can use a hint, which will reveal letters(10%) in that word.")
-    print("[BEWARE! If a letter was revealed by a hint, it doesn’t mean that the same letter may not occur at a different location.]")
+    print("BEWARE! If a letter was revealed by a hint, it doesn’t mean that the same letter may not occur at a different location.")
     print("6. With each wrong letter, you lose a limb.")
     print("7. After guessing the word, you can regrow a limb by selecting the correct definition from available choices.\n")
     
